@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeBuilder Pro - Create Professional Resumes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="nav-brand">ResumeBuilder Pro</div>
+            <ul class="nav-menu">
+                <li><a href="#builder">Resume Builder</a></li>
+                <li><a href="#review">Resume Review</a></li>
+                <li><a href="articles/">Job Tips</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero-content">
+            <h1>Create Professional Resumes in Minutes</h1>
+            <p>Build ATS-friendly resumes with our AI-powered platform</p>
+            <div class="cta-buttons">
+                <button class="btn-primary" onclick="startResumeBuilder()">
+                    <i class="fas fa-file-alt"></i> Build Resume
+                </button>
+                <button class="btn-secondary" onclick="startResumeReview()">
+                    <i class="fas fa-search"></i> Review Resume
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Resume Builder Section -->
+        <section id="builder" class="builder-section">
+            <div class="container">
+                <h2>Choose Your Template</h2>
+                <div class="template-grid">
+                    <div class="template-card" data-template="modern-ats">
+                        <div class="template-preview">
+                            <img src="assets/images/modern-ats-preview.png" alt="Modern ATS Template">
+                        </div>
+                        <h3>Modern ATS-Friendly</h3>
+                        <p>Perfect for corporate roles</p>
+                        <div class="color-options">
+                            <span class="color-dot" data-color="blue"></span>
+                            <span class="color-dot" data-color="green"></span>
+                            <span class="color-dot" data-color="purple"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card" data-template="swiss-professional">
+                        <div class="template-preview">
+                            <img src="assets/images/swiss-preview.png" alt="Swiss Professional">
+                        </div>
+                        <h3>Swiss Professional</h3>
+                        <p>Clean with subtle accents</p>
+                        <div class="color-options">
+                            <span class="color-dot" data-color="orange"></span>
+                            <span class="color-dot" data-color="red"></span>
+                            <span class="color-dot" data-color="teal"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more templates as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Review Section -->
+        <section id="review" class="review-section">
+            <div class="container">
+                <h2>Get AI-Powered Resume Review</h2>
+                <div class="upload-area">
+                    <div class="drop-zone" id="dropZone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drop your resume here or click to upload</p>
+                        <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" hidden>
+                        <button class="btn-upload" onclick="document.getElementById('resumeFile').click()">
+                            Select File
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
